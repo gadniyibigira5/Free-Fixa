@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback - Freefixa</title>
+    <link rel="icon" href="gad.jpg">
+    <link rel="stylesheet" href="new 1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .feedback-container { max-width: 1200px; margin: 30px auto; padding: 20px; }
+        .form-box {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 2px solid green;
+        }
+        .form-box input, .form-box select, .form-box textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .form-box button {
+            background: #28a745;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        th { background: green; color: white; padding: 12px; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+        .print-btn {
+            background: #17a2b8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            float: right;
+        }
+        .demo-note {
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        @media print {
+            .form-box, .print-btn, .demo-note, .sidebar, marquee, footer, .auth-buttons { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo"><img src="logo.jpg" alt="Freefixa Logo"></div><br>
+
+
+<!-- Sidebar -->
+<input type="checkbox" id="menu-toggle">
+<div class="sidebar">
+    <label for="menu-toggle" class="menu-label">☰ <span class="label-text">Menu</span></label>
+    <ul class="menu-items">
+        <li><a href="index.html">🏠 <span class="label-text">Home</span></a></li>
+        <li><a href="about.html">ℹ️ <span class="label-text">About</span></a></li>
+        <li><a href="lux.html">🛒 <span class="label-text">Shop</span></a></li>
+        <li><a href="contact.html">📞 <span class="label-text">Contact</span></a></li>
+        <li><a href="feedback.html">💬 <span class="label-text">Feedback</span></a></li>
+    </ul>
+</div>
+
+<div class="auth-buttons">
+    <a href="login.html" class="btn">Login</a>
+    <a href="signup.html" class="btn">Sign Up</a>
+</div>
+
+<div class="main-content">
+    <marquee>📝 Share Your Feedback - We Value Your Opinion!</marquee>
+
+    <div class="feedback-container">
+        <div class="demo-note">
+            ⚠️ Demo Mode: This is a static preview showing sample feedback data.<br>
+            In the full PHP version, you can Add, Edit, Delete, and Print feedback.
+        </div>
+        
+        <!-- Feedback Form -->
+        <div class="form-box">
+            <h2>📝 Leave Your Feedback</h2>
+            <form onsubmit="alert('🎉 Thank you for your feedback! (Demo Mode)'); return false;">
+                <input type="text" value="Guest User" disabled>
+                <select required>
+                    <option value="">Select Department</option>
+                    <option value="Sales">🛒 Sales Department</option>
+                    <option value="Technical">💻 Technical Support</option>
+                    <option value="Customer Service">🤝 Customer Service</option>
+                    <option value="Management">👔 Management</option>
+                    <option value="Products">📦 Products Quality</option>
+                </select>
+                <textarea rows="4" placeholder="Write your feedback here..."></textarea>
+                <button type="submit">📤 Submit Feedback</button>
+            </form>
+        </div>
+        
+        <!-- Print Button -->
+        <button class="print-btn" onclick="window.print()">🖨️ Print Table</button>
+        
+        <!-- Feedback Table -->
+        <h2>📋 Customer Feedback</h2>
+        <table>
+            <thead>
+                <tr><th>ID</th><th>Name</th><th>Department</th><th>Product</th><th>Comment</th><th>Date</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>John Nsabimana</td><td>Sales</td><td>Gold Watch</td><td>Amazing quality! Fast shipping.</td><td>2025-05-21</td><td>✏️ 🗑️</td></tr>
+                <tr><td>2</td><td>Claire uwimana</td><td>Technical</td><td>Gold Chain</td><td>Excellent customer support.</td><td>2025-05-20</td><td>✏️ 🗑️</td></tr>
+                <tr><td>3</td><td>Michael Nzabonimpa</td><td>Products</td><td>Diamond Bracelet</td><td>Beautiful product! Highly recommend.</td><td>2025-05-19</td><td>✏️ 🗑️</td></tr>
+                <tr><td>4</td><td>Sarah sanyu</td><td>Customer Service</td><td>Luxury Ring</td><td>Very responsive team. Will buy again.</td><td>2025-05-18</td><td>✏️ 🗑️</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Freefixa - Customer Feedback System | Demo Version</p>
+</footer>
+
+</body>
+</html>

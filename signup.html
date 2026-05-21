@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - Freefixa</title>
+    <link rel="stylesheet" href="new 1.css">
+    <style>
+        /* Additional matching CSS for signup page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Signup Form Box - Matches your theme */
+        .form-box {
+            background: white;
+            padding: 40px;
+            width: 400px;
+            max-width: 90%;
+            margin: auto;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 2px solid green;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .form-box h2 {
+            color: green;
+            margin-bottom: 25px;
+            font-size: 28px;
+            border-left: 4px solid green;
+            padding-left: 15px;
+            text-align: left;
+        }
+        
+        .form-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+        
+        .form-box input:focus {
+            outline: none;
+            border-color: green;
+            box-shadow: 0 0 5px rgba(0,128,0,0.3);
+        }
+        
+        .form-box button {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        
+        .form-box button:hover {
+            background-color: darkgreen;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40,167,69,0.4);
+        }
+        
+        .form-box p {
+            margin-top: 20px;
+            color: #555;
+        }
+        
+        .form-box a {
+            color: green;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .form-box a:hover {
+            text-decoration: underline;
+            color: darkgreen;
+        }
+        
+        .error-text {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 3px solid #dc3545;
+            text-align: center;
+        }
+        
+        .success-text {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 3px solid #28a745;
+            text-align: center;
+        }
+        
+        /* Logo styling */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo-container img {
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        
+        /* Back to home link */
+        .back-home {
+            display: inline-block;
+            margin-top: 15px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .back-home:hover {
+            color: green;
+        }
+        
+        /* Password hint */
+        .password-hint {
+            font-size: 12px;
+            color: #888;
+            text-align: left;
+            margin-top: -8px;
+            margin-bottom: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .form-box {
+                padding: 25px;
+            }
+            .form-box h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Freefixa Logo">
+        </div>
+        
+        <h2>📝 Create Your Account</h2>
+
+      
+
+        <form method="POST">
+            <input type="text" name="fullname" placeholder="👤 Full Name" required>
+            <input type="email" name="email" placeholder="📧 Email Address" required>
+            <input type="password" name="password" placeholder="🔒 Password" required>
+            <div class="password-hint">Password should be at least 6 characters</div>
+            <button type="submit" name="signup">Create Account</button>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Login Here</a></p>
+        <a href="index.html" class="back-home">← Back to Home</a>
+    </div>
+</body>
+</html>
